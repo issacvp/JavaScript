@@ -1,0 +1,15 @@
+What is a tree? 
+    There is one root 
+    There is only one unique path between two nods
+    Root node because there is no parent 
+    Leaf nodes because there are no children
+    Levels : Same distance from the root 
+        0 level --> Root node 
+    Height : The largest level 
+
+What is a binary tree? 
+    Tree where each node has at most two children 
+    
+Depth First Traversal
+    Travel as far as to a leaf before visiting other branches 
+    

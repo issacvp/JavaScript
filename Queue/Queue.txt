@@ -1,0 +1,12 @@
+What is a queue? 
+    Collection of items 
+    Add t back of queue   enqueue 
+    Remove front of queue dequeue 
+    First in first Out (FIFO)
+  
+What is a queue useful for? 
+    . FIFO pattern 
+    . tracking requests for a limited resource 
+    . Graph algorithms 
+
+Implementing a queue 

@@ -1,0 +1,10 @@
+. When to use Recursion ? 
+For problems than contain smaller instances of the same problem 
+
+
+Anatomy of Recursion : 
+    1. Base cause  : 
+        The smallest instance of the problem that is solved trivially 
+    2. Recursive case : 
+    An instance of a problem that shrinks towards the total problem 
+

@@ -1,0 +1,26 @@
+What is BDD?  Behavioral Driven Development 
+    Business team and technical team 
+    Working raid, small 
+
+First , Small upcoming changes 
+    Discover how it workds 
+
+Document how it workd 
+
+Coding 
+
+Automated test will guide development 
+
+
+Discovery Formulation and Automation 
+-----------------------------------------
+
+Living Document :   Document reflect the code , and team is following the document and the living document become an importanct asset for the team 
+
+
+
+Prerequisite : 
+-----------------
+An Agile project 
+Acceptance criteria and business requirements and the use stories are in place 
+

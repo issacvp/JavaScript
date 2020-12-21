@@ -1,0 +1,18 @@
+Learning Objectives 
+    . Define what a stack is 
+    . describe some use cases 
+    . Implement a stack 
+
+What is a stack ?
+    . collection of items 
+    . Stack is particular on the order of insertion and deletion 
+    . Last in First Out LIFO() 
+
+What are the uses of stack ? 
+    . Tracking a history of steps 
+        browser history
+    . Bracktracking algorithms (Depth first stretch)
+
+Implementation : 
+    JS array can act as a stack , with push and pop method
+

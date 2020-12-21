@@ -1,0 +1,17 @@
+Objective : 
+    Implement a linked list that can 
+        . add a new value 
+        . print the list 
+        . search for an existing value;
+
+Special about LL
+    data structure where values are chained sequentially 
+    more efficient for insertion and deletion than arrays 
+    does not require contigous memory as arrays
+
+Recursive linked list: 
+    Implementive recursive methods to 
+        add a new value to a ll;
+        print the list; 
+        
+    
