@@ -11,4 +11,4 @@ function addUptoN(n){
 }
 
 console.log(addUpto(100));
-console.log(addUptoN(100));
+console.log(addUpto(100));

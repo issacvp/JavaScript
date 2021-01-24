@@ -1,0 +1,16 @@
+Objectives :
+    . Explain what a graph 
+    compare tand contrast 
+    Implement a graph using an adjacent matrix 
+    Traverse through BFS and DFS 
+
+
+    Graph   == Nodes + Connections 
+
+
+    Graph terms : 
+        Vertex : a node 
+        Edge : Conneciton between nodes 
+        Weighted /Unweighted  values assigned to distances between vertices 
+        
+        

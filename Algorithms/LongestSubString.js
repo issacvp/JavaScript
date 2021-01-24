@@ -70,7 +70,7 @@ function lengthOfLongestSubString(s){
 
 5) LOOK BACK & REFACTOR 
   a. can you check the result?
-  b. can you derive the result differently?
+  b. can you derive the result differently? dmap[arr[i]]+1
   c. can you understand it at a glance?
   d. can you use the result or method for some other problem?
   e. can you improve the performance of your solution 
@@ -78,7 +78,9 @@ function lengthOfLongestSubString(s){
   g. How have other people solved the same problem  
 */
 
-function lengthOfLongestSubString(s){
+const assert = require('assert').strict;
+
+function findLongestSubstring(s){
   var arr = s.split("");
   if(arr.length ==0){
     return 0;
@@ -86,12 +88,13 @@ function lengthOfLongestSubString(s){
   var map = {};
   var max = 0;
   for(let i=0,j=0; i<arr.length ; i++){
-    if(map[arr[i]]){
-      j = Math.max(j, map[arr[i]]+1);
+    if(arr[i] in map){
+      j = Math.max(j, map[arr[i]]+1); 
     }
     map[arr[i]] = i;
     max = Math.max(max, i-j+1);
   }
   return max;
 }
-lengthOfLongestSubString("dvdf");
+assert.strictEqual(findLongestSubstring('thisishowwedoit'),6);
+//console.log(f);

@@ -28,4 +28,5 @@ function bracketMatcher(str) {
 }
 
 
-console.log(bracketMatcher("the color re(d))()(()"));
+console.log(bracketMatcher("the color re(d)()"));
+console.log(bracketMatcher("())"))

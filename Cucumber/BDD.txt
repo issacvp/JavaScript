@@ -17,8 +17,6 @@ Discovery Formulation and Automation
 
 Living Document :   Document reflect the code , and team is following the document and the living document become an importanct asset for the team 
 
-
-
 Prerequisite : 
 -----------------
 An Agile project 

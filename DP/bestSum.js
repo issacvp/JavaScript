@@ -30,7 +30,7 @@
             if(shortestCombination ===null || combination.length < shortestCombination.length) {
                 shortestCombination = combination;
             }
-        }
+        }mm
     }
     memo[targetSum] = shortestCombination;
     return shortestCombination;

@@ -6,5 +6,4 @@ function calculateAverage(numbers) {
     return sum / numbers.length;                 // <== Constant number of time 
 }
 console.log(calculateAverage([2,3,4,1]));
-
 // Complexity O(n*4) ==> O(n) where n is the length of the input array 
