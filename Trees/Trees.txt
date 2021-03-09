@@ -13,3 +13,21 @@ What is a binary tree?
 Depth First Traversal
     Travel as far as to a leaf before visiting other branches 
     
+
+Depth First tree 
+---------------
+1. InOrder   V-L-R
+    Time : O(n) Space : O(m) where m is the height of hte tree 
+2. PreOrder  L-V-R
+    Time : O(n) Space : O(m) where m is the height of hte tree 
+3. PostOrder L-R-V
+                     10 
+                15         30 
+              3     6           2
+         5                    9     8
+
+    PreOrder : 10,15,3,5,6,30,2,9,8
+    InOrder  : 5,3,15,6,10,30,9,2,8
+    PostOrder: 5,3,6,15,9,8,2,30,10
+
+

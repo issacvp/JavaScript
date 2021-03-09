@@ -66,6 +66,8 @@ function preOrder(root) {
 
 preOrder(a);
 
+
+
 //LEFT, RIGHT, SELF
 function postOrder(root) {
     // The tree is empty
@@ -77,6 +79,31 @@ function postOrder(root) {
 
 postOrder(a);
 
+function postOrderBFS(root) {
+  if(root === null)  return;
+  var stack1 = [];
+  var stack2 = []; 
+  stack1.push(root);
+
+  while(stack1.length > 0 ) {
+    root = stack1.pop();
+    stack2.push(root);
+
+    if(root.left) 
+      stack1.push(root.left);
+    if(root.right) 
+      stack1.push(root.right);
+  }
+
+  while(stack2.length > 0) {
+    root = stack2.pop();
+    console.log(root.val);
+  }
+  
+}
+
+postOrderBFS(a);
+
 //LEFT, SELF RIGHT
 function inOrder(root) {
     // The tree is empty
@@ -87,6 +114,8 @@ function inOrder(root) {
 }
 
 inOrder(a);
+
+
 
 a = new Node(3);
 b = new Node(2);

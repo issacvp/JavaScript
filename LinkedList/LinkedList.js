@@ -65,16 +65,6 @@ class LinkedList {
         if (curr.data === data) return true;
         return this._contains(curr.next, data);
     }
-    print() {
-        const output = this._print(this.head);
-        console.log(output);
-    }
-    _print(curr) {
-        if (curr === null) {
-            return '';
-        }
-        return curr.data + '->' + this._print(curr.next);
-    }
     // deleteValue(head, target) {
     //     // Edge cases : 
     //     // 1) Delete first node 
@@ -137,6 +127,31 @@ class LinkedList {
         curr.next = prev;
         return this._reverse(next, curr);
     }
+    removeDuplicates(){
+        var memo = {};
+        var temp = this.head.next, prev = this.head;
+        memo[prev.data] = true;
+        while(temp !== null) {
+            if(temp.data in memo) {
+                prev.next = temp.next;
+                temp = prev.next;
+            } else {
+                memo[temp.data] = true;
+                prev = prev.next;
+                temp = prev.next;
+            }
+        }
+    }
+    print() {
+        const output = this._print(this.head);
+        console.log(output);
+    }
+    _print(curr) {
+        if (curr === null) {
+            return '';
+        }
+        return curr.data + '->' + this._print(curr.next);
+    }
 }
 
 
@@ -144,6 +159,13 @@ const list = new LinkedList();
 list.append('a');
 list.append('b');
 list.append('c');
+list.append('a');
+list.append('c');
+list.append('a');
+list.append('b');
 list.print();
-list.reverse();
+//list.reverse();
+//list.print();
+list.removeDuplicates();
 list.print();
+
