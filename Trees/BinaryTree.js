@@ -109,11 +109,11 @@ function inOrder(root) {
     // The tree is empty
     if(root == null) return ;
     inOrder(root.left);
-    console.log(root.val);
+      console.log(root.val);
     inOrder(root.right);
 }
 
-inOrder(a);
+//inOrder(a);
 
 
 
@@ -130,6 +130,7 @@ b.left = d;
 b.right = e;
 c.right = f;
 
+inOrder(a);
 function sumTree(root) {
   const queue = [root];
   let sum = 0;
