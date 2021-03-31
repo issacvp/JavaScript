@@ -104,4 +104,3 @@ list.append(0).append(1).append(2).append(3).append(4);
 //list.insert(2,5).insert(3,6).insert(4,7)
 console.log(list.print());
 console.log(list.delete(3));
-
