@@ -6,13 +6,14 @@ class Node {
   }
 }
 
+
+
 let a = new Node("a");
 let b = new Node("b");
 let c = new Node("c");
 let d = new Node("d");
 let e = new Node("e");
 let f = new Node("f");
-
 a.left = b;
 a.right = c;
 b.left = d;
@@ -36,8 +37,8 @@ function bfs(root, target) {
   return false;
 }
 
-console.log(bfs(a, "e"));
-console.log(bfs(a, "z"));
+//console.log(bfs(a, "e"));
+//console.log(bfs(a, "z"));
 
 function dfs(root) {
   const stack = [root];
@@ -57,65 +58,118 @@ dfs(a);
 
 // SELF, LEFT, RIGHT
 function preOrder(root) {
-    // The tree is empty
-    if(root == null) return ;
-    console.log(root.val);
-    preOrder(root.left);
-    preOrder(root.right);
+  // The tree is empty
+  if (root == null) return;
+  console.log(root.val);
+  preOrder(root.left);
+  preOrder(root.right);
 }
 
-preOrder(a);
+//preOrder(a);
 
 
 
 //LEFT, RIGHT, SELF
 function postOrder(root) {
-    // The tree is empty
-    if(root == null) return ;
-    postOrder(root.left);
-    postOrder(root.right);
-    console.log(root.val);
+  // The tree is empty
+  if (root == null) return;
+  postOrder(root.left);
+  postOrder(root.right);
+  console.log(root.val);
 }
 
-postOrder(a);
+//postOrder(a);
 
 function postOrderBFS(root) {
-  if(root === null)  return;
+  if (root === null) return;
   var stack1 = [];
-  var stack2 = []; 
+  var stack2 = [];
   stack1.push(root);
 
-  while(stack1.length > 0 ) {
+  while (stack1.length > 0) {
     root = stack1.pop();
     stack2.push(root);
 
-    if(root.left) 
+    if (root.left)
       stack1.push(root.left);
-    if(root.right) 
+    if (root.right)
       stack1.push(root.right);
   }
 
-  while(stack2.length > 0) {
+  while (stack2.length > 0) {
     root = stack2.pop();
     console.log(root.val);
   }
-  
+
 }
 
-postOrderBFS(a);
+//postOrderBFS(a);
 
 //LEFT, SELF RIGHT
 function inOrder(root) {
-    // The tree is empty
-    if(root == null) return ;
-    inOrder(root.left);
-      console.log(root.val);
-    inOrder(root.right);
+  // The tree is empty
+  if (root == null) return;
+  inOrder(root.left);
+  console.log(root.val);
+  inOrder(root.right);
 }
 
 //inOrder(a);
 
+function inorderIterative(root) {
+  var stack = [];
+  var current = root;
+  var result = [];
+  while (true) {
+    while (current) {
+      stack.push(current);
+      current = current.left;
+    }
+    if (stack.length == 0) break;
+    var lastCurrent = stack.pop();
+    result.push(lastCurrent.val);
+    current = lastCurrent.right;
+  }
+  return result;
+}
 
+console.log(inorderIterative(a));
+
+function preorderIterative(root) {
+  var stack = [root];
+  var result = [];
+  while (stack.length > 0) {
+    let current = stack.pop();
+    result.push(current.val);
+    if (current.right)
+      stack.push(current.right);
+    if (current.left)
+      stack.push(current.left);
+  }
+  return result;
+}
+
+console.log(preorderIterative(a));
+
+function postorderIterative(root) {
+  var stack = [];
+  var result = [];
+  var current = root;
+  while(current || stack.length > 0) {
+    if(current) {
+      stack.push(current);
+      result.unshift(current.val);
+      current = current.right;
+    } else {
+      current = stack.pop();
+      current = current.left;
+    }
+  }
+  
+  return result;
+}
+
+console.log(postorderIterative(a));
 
 a = new Node(3);
 b = new Node(2);
@@ -130,7 +184,8 @@ b.left = d;
 b.right = e;
 c.right = f;
 
-inOrder(a);
+console.log(preorderIterative(a));
+
 function sumTree(root) {
   const queue = [root];
   let sum = 0;
@@ -150,8 +205,8 @@ function sumTree(root) {
 console.log(sumTree(a));
 
 function sumTreeDFS(root) {
-    if(root === null) return 0;
-    return sumTreeDFS(root.left) + root.val + sumTreeDFS(root.right);
+  if (root === null) return 0;
+  return sumTreeDFS(root.left) + root.val + sumTreeDFS(root.right);
 }
 
 console.log(sumTreeDFS(a));

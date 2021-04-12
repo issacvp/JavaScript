@@ -95,6 +95,30 @@ class LinkedList {
         }
         return temp;
     }
+    // reverse() {
+    //     let curr = this.head;
+    //     let prev = null;
+    //     this.tail = this.head;
+    //     while(curr) {
+    //         let next = curr.next;
+    //         curr.next = prev;
+    //         prev = curr;
+    //         curr = next;
+    //     }
+    //     this.head = prev;
+    //     return this.head;
+    // }
+    reverse() {
+        this.head = this._reverse(this.head, null);
+    }
+    _reverse(curr, prev) {
+        if(curr === null){
+            return prev;
+        }
+        const next = curr.next;
+        curr.next = prev;
+        return this._reverse(next, curr);
+    }
     
 }
 
@@ -103,4 +127,9 @@ list.append(0).append(1).append(2).append(3).append(4);
 //list.prepend(0).prepend(-1).prepend(-2);
 //list.insert(2,5).insert(3,6).insert(4,7)
 console.log(list.print());
-console.log(list.delete(3));
+//console.log(list.delete(3));
+
+list.reverse();
+console.log(list.print());
+list.reverse();
+console.log(list.print());
